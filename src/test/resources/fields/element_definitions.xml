@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../fields/xsd/element_rules.xsd">
+
+    <Page name="Главная страница">
+        <Collection name="Главное меню" locator="//ul[@class='main-menu']/li">
+            <Button name="Наименование" locator="."/>
+        </Collection>
+        <Collection name="Подменю" locator="//a[contains(@class, 'menu-link main')][@href]">
+            <Button name="Наименование" locator="."/>
+        </Collection>
+    </Page>
+    <Page name="Ипотека">
+        <Button name="Оставить заявку"
+                locator="//div[@class=&quot;b-intro__block-content&quot;]//a[text()='Оставить заявку']"
+                isLoaded="true"/>
+    </Page>
+    <Page name="Заполнение заявки на ипотеку">
+        <StaticText name="Заголовок" locator="//*[text()='Заполнение заявки']"/>
+        <TextInput name="Фамилия"/>
+        <TextInput name="Имя"/>
+        <TextInput name="Отчество"/>
+        <TextInput name="E-mail"/>
+        <TextInput name="Дата рождения"/>
+        <TextInput name="Серия и номер паспорта"/>
+        <TextInput name="Место рождения"/>
+        <TextInput name="Ежемесячный доход"/>
+        <TextInput name="Телефон"/>
+        <Button name="Продолжить" locator="//*[text()='Продолжить']"/>
+        <ComboBox name="Могу подтвердить с помощью"
+                  locator="//*[text()='Могу подтвердить с помощью']/../div[@data-marker-field='acceptSalary']"/>
+    </Page>
+</Pages>
